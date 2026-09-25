@@ -1,0 +1,9 @@
+* {
+  font-family: "Times New Roman", Times, serif, sans-serif;
+}
+.gambar {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}

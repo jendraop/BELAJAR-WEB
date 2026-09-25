@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "webku";
+  src: url(fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "webku";
+}
+body {
+  background-image: url(/tugas-1/foto-bersamas.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+div.bar_atas {
+  height: 40px;
+  border: 10px solid black;
+  background-color: black;
+  margin: -8px;
+  display: flex;
+  justify-content: space-between;
+}
+div div {
+  color: white;
+  border: 10px solid white;
+}
+h1 {
+  color: black;
+  text-align: center;
+}
