@@ -8,25 +8,8 @@
   font-family: "webku";
 }
 body {
-  background-image: url(/tugas-1/foto-bersamas.jpg);
-  background-color: rebeccapurple;
+  background-image: url(tugas-prak-proweb/tugas-29-09-2026/edited-photo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-div.bar_atas {
-  height: 40px;
-  border: 10px solid black;
-  background-color: black;
-  margin: -8px;
-  display: flex;
-  justify-content: space-between;
-}
-div div {
-  color: white;
-  border: 10px solid white;
-}
-h1 {
-  color: black;
-  text-align: center;
 }
