@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    <input type="text" id="layar" disabled /><br />
+    <button class="aksi" onclick="bersihkan()">C</button>
+    <button class="aksi" onclick="hapusSatu()">DEL</button>
+    <button class="operator" onclick="tambahKarakter('/')">÷</button>
+    <button class="operator" onclick="tambahKarakter('*')">×</button>
+    <button class="operator" onclick="tambahKarakter('-')">-</button>
+    <button class="operator" onclick="tambahKarakter('+')">+</button>
+    <button class="operator" onclick="hitung()">=</button>
+    <button onclick="tambahKarakter('.')">.</button>
+
+    <button onclick="tambahKarakter('0')" style="grid-column: span 2">0</button>
+    <button onclick="tambahKarakter('1')">1</button>
+    <button onclick="tambahKarakter('2')">2</button>
+    <button onclick="tambahKarakter('3')">3</button>
+    <button onclick="tambahKarakter('4')">4</button>
+    <button onclick="tambahKarakter('5')">5</button>
+    <button onclick="tambahKarakter('6')">6</button>
+    <button onclick="tambahKarakter('7')">7</button>
+    <button onclick="tambahKarakter('8')">8</button>
+    <button onclick="tambahKarakter('9')">9</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+#yoooo {
+  text-align: center;
+  background-color: black;
+  font-family: "Times New Roman", Times, serif;
+  color: yellow;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul.emoji li {
+  background-image: url("./shield.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 20px;
+  padding-left: 100px;
+  margin-bottom: 100px;
+  align-items: center;
+}

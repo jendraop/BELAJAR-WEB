@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="in">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width initial-scale=1.0"
+    />
+    <style>
+      @font-face {
+        font-family: "web";
+        src: url(../alat-bantu/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
+        font-weight: normal;
+        font-style: normal;
+      }
+      @media only screen and (max-width: 758px) {
+        .btn-primary,
+        .btn-outline-success {
+          margin-top: 10px;
+          margin-left: 0 !important;
+        }
+      }
+    </style>
+    <title>tugas 4</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+  </head>
+
+  <body style="font-family: web">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Jendra Winata</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tutorial
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HTML</a></li>
+                <li><a class="dropdown-item" href="#">CSS</a></li>
+                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">PHP</a>
+                  <a class="dropdown-item" href="#">MySQL</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Hubungi</a>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-success me-2">
+            Daftar
+          </button>
+          <a class="btn btn-primary" href="#" role="button">Masuk</a>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center">
+            <h1>
+              Hai! <br />
+              Selamat Datang di <br />
+              Proweb
+            </h1>
+            <p class="mt-3 mb-4">
+              Belajar pemrograman web mulai dari HTML, CSS, JavaScript, PHP dan
+              MySQL
+            </p>
+            <a href="#" class="btn btn-success" role="button">Mulai Sekarang</a>
+          </div>
+          <div class="col d-none d-lg-block d-xl-block">
+            <img
+              src="../tugas-1/foto-bersamas.jpg"
+              alt="foto-bersamas"
+              width="800"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KODE TAMBAHAN: Section Berita sesuai Instruksi Tugas -->
+    <section class="py-5 bg-light mt-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">Berita Terbaru</h2>
+        <div class="row g-4">
+          <!-- Berita 1 -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="../tugas-1/foto-bersamas.jpg"
+                class="card-img-top"
+                alt="Berita 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">kumpulan foto</h5>
+                <p class="card-text">
+                  berikut adalah foto yang bisa di jadikan walpaper ataupun
+                  editan
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <!-- Berita 2 -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="../tugas-1/foto-bersamas.jpg"
+                class="card-img-top"
+                alt="Berita 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">kumpulan foto</h5>
+                <p class="card-text">
+                  berikut adalah foto yang bisa di jadikan walpaper ataupun
+                  editan
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <!-- Berita 3 -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="../tugas-1/foto-bersamas.jpg"
+                class="card-img-top"
+                alt="Berita 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Kumpulan foto</h5>
+                <p class="card-text">
+                  berikut adalah foto yang bisa di jadikan walpaper ataupun
+                  editan
+                </p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="bootstrap.js"></script>
+  </body>
+</html>

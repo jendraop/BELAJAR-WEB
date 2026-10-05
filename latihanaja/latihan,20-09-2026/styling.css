@@ -1,0 +1,23 @@
+h2 {
+  color: orange;
+}
+
+.penulis {
+  color: red;
+}
+
+.tanggal {
+  color: green;
+}
+
+.kalimat1 {
+  color: gray;
+}
+
+.jenis {
+  color: purple;
+}
+
+.kalimat2 {
+  font-weight: bold;
+}
