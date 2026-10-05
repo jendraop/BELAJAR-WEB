@@ -3,7 +3,9 @@
   <head>
     <title>Suit</title>
     <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="aos.css" />
     <script src="bootstrap.js"></script>
+    <script src="aos.js"></script>
     <style>
       @font-face {
         font-family: "web";
@@ -24,11 +26,16 @@
   </head>
   <body>
     <section class="min-vh-100 d-flex align-items-center">
-      <div class="container text-center">
+      <div class="container text-center" data-aos="fade-up">
         <div class="row justify-content-around">
-          <div class="card" style="width: 18rem">
+          <div class="card mt-5" style="width: 18rem">
+            <img
+              src="suit-hewan.gif"
+              alt="gambaran suit"
+              class="card-img-top"
+            />
             <div class="card-body">
-              <h5 class="card-tittle">Suten Hewan</h5>
+              <h5 class="card-title">Suten Hewan</h5>
               <p class="card-text">
                 Suten hewan adalah suit yang menggunakan gajah - manusia -
                 semut, sebagai penentu kemenangan
@@ -36,9 +43,14 @@
               <a href="#" class="btn btn-primary">Play</a>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card mt-5" style="width: 18rem">
+            <img
+              src="suit-benda.gif"
+              alt="gambaran suit"
+              class="card-img-top"
+            />
             <div class="card-body">
-              <h5 class="card-tittle">Suten Benda</h5>
+              <h5 class="card-title">Suten Benda</h5>
               <p class="card-text">
                 Suten benda adalah suit yang menggunakan batu - gunting -
                 kertas, sebagai penentu kemenangan
@@ -46,9 +58,10 @@
               <a href="#" class="btn btn-primary">Play</a>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
+          <div class="card mt-5" style="width: 18rem">
+            <img src="suit-jari.gif" alt="gambaran suit" class="card-img-top" />
             <div class="card-body">
-              <h5 class="card-tittle">Suten jari</h5>
+              <h5 class="card-title">Suten jari</h5>
               <p class="card-text">
                 Suten jari adalah suit yang menggunakan jempol - telunjuk -
                 kelingking, sebagai penentu kemenangan
@@ -59,5 +72,8 @@
         </div>
       </div>
     </section>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
