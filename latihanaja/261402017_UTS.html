@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Nilai</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap");
+
+      * {
+        font-family: "Bitcount Ink", system-ui;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-group {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        font-size: 18px;
+      }
+      #inputNilai {
+        width: 100px;
+      }
+      button {
+        padding: 5px 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-group">
+      <label for="inputNilai">Input Nilai</label>
+      <input
+        type="number"
+        id="inputNilai"
+        min="0"
+        max="100"
+        placeholder="0-100"
+      />
+      <button onclick="cekNilai()">Cek Nilai</button>
+    </div>
+
+    <script>
+      function cekNilai() {
+        let nilai = document.getElementById("inputNilai").value;
+
+        if (nilai === "" || nilai < 0 || nilai > 100) {
+          alert("Silakan masukkan nilai antara 0 hingga 100.");
+          return;
+        }
+
+        nilai = parseFloat(nilai);
+        let hasil = "";
+
+        if (nilai >= 80) {
+          hasil = "A";
+        } else if (nilai >= 75 && nilai < 80) {
+          hasil = "B+";
+        } else if (nilai >= 70 && nilai < 75) {
+          hasil = "B";
+        } else if (nilai >= 65 && nilai < 70) {
+          hasil = "C+";
+        } else if (nilai >= 60 && nilai < 65) {
+          hasil = "C";
+        } else if (nilai >= 55 && nilai < 60) {
+          hasil = "D";
+        } else {
+          hasil = "E";
+        }
+
+        if (hasil === "E" || hasil === "D") {
+          alert("Sayang sekali Anda mendapatkan nilai " + hasil);
+        } else {
+          alert("Selamat, Anda mendapatkan nilai " + hasil);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -4,8 +4,9 @@
     <title>Suit</title>
     <link rel="stylesheet" href="../bootstrap.css" />
     <link rel="stylesheet" href="../aos.css" />
-    <script src="../bootstrap.js"></script>
-    <script src="../aos.js"></script>
+    <script src="../bootstrap.js" defer></script>
+    <script src="../aos.js" defer></script>
+    <script src="script.js" defer></script>
     <style>
       @font-face {
         font-family: "web";
@@ -22,6 +23,17 @@
         min-height: 100vh;
         min-width: 100%;
       }
+      .card:hover {
+        --bs-bg-opacity: 1;
+        background-color: rgba(
+          var(--bs-info-rgb),
+          var(--bs-bg-opacity)
+        ) !important;
+      }
+      a:hover {
+        background-color: black !important;
+        color: white !important;
+      }
     </style>
   </head>
   <body>
@@ -33,27 +45,36 @@
           </h1>
         </div>
         <div class="row justify-content-around">
-          <div class="col">
+          <div class="col" id="kartu1">
             <div class="card h-100">
               <img
-                src="../suit-hewan.gif"
+                src="gajah.gif"
                 alt="gif gajah"
                 class="card-img-top"
                 style="height: 200px; object-fit: cover"
+                id="gajah"
               />
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Gajah</a>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="gajah"
+                  onclick="hilang()"
+                >
+                  gajah
+                </button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="kartu2">
             <div class="card h-100">
               <img
                 src="semut.gif"
                 alt="gif semut"
                 class="card-img-top"
                 style="height: 200px; object-fit: cover"
+                id="semut"
               />
               <div class="card-body">
                 <a href="#" class="btn btn-primary">Semut</a>
@@ -61,13 +82,14 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" id="kartu3">
             <div class="card h-100">
               <img
                 src="human.gif"
                 alt="gif manusia"
                 class="card-img-top"
                 style="height: 200px; object-fit: cover"
+                id="human"
               />
               <div class="card-body">
                 <a href="#" class="btn btn-primary">Manusia/Orang</a>
