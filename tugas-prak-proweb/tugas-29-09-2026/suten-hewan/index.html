@@ -4,8 +4,9 @@
     <title>Suit</title>
     <link rel="stylesheet" href="../bootstrap.css" />
     <link rel="stylesheet" href="../aos.css" />
+    <link rel="stylesheet" href="../animate.css" />
     <script src="../bootstrap.js" defer></script>
-    <script src="../aos.js" defer></script>
+    <script src="../aos.js"></script>
     <script src="script.js" defer></script>
     <style>
       @font-face {
@@ -23,6 +24,10 @@
         min-height: 100vh;
         min-width: 100%;
       }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
       .card:hover {
         --bs-bg-opacity: 1;
         background-color: rgba(
@@ -30,74 +35,135 @@
           var(--bs-bg-opacity)
         ) !important;
       }
-      a:hover {
-        background-color: black !important;
-        color: white !important;
+      .kartuMengecil {
+        transform: scale(0.7, 0.7);
+      }
+      .kartuMembesar {
+        transform: scale(1.2, 1.2);
       }
     </style>
   </head>
   <body>
-    <div class="min-vh-100 d-flex align-items-center">
-      <div class="container text-center">
-        <div class="bg-secondary text-white">
-          <h1 class="text-center text-uppercase fw-bold">
-            silahkan pilih mau pakai yang mana
-          </h1>
-        </div>
+    <section class="min-vh-100 d-flex align-items-center">
+      <div class="container text-center" data-aos="fade-up">
         <div class="row justify-content-around">
-          <div class="col" id="kartu1">
-            <div class="card h-100">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="Gajah"
+          >
+            <a
+              href="#"
+              class="btn"
+              role="button"
+              onclick="playerMilihKartu('Gajah')"
+            >
               <img
-                src="gajah.gif"
-                alt="gif gajah"
+                src="gajah-diam.png"
+                onmouseover="this.src = 'gajah.gif'"
+                onmouseout="this.src = 'gajah-diam.png'"
+                alt="gambaran suit"
                 class="card-img-top"
-                style="height: 200px; object-fit: cover"
-                id="gajah"
               />
               <div class="card-body">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  id="gajah"
-                  onclick="hilang()"
-                >
-                  gajah
-                </button>
+                <h5 class="card-title">Gajah</h5>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="col" id="kartu2">
-            <div class="card h-100">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="Manusia"
+          >
+            <a
+              href="#"
+              class="btn"
+              role="button"
+              onclick="playerMilihKartu('Manusia')"
+            >
               <img
-                src="semut.gif"
-                alt="gif semut"
+                src="human-diam.jpg"
+                alt="gambaran suit"
                 class="card-img-top"
-                style="height: 200px; object-fit: cover"
-                id="semut"
               />
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Semut</a>
+                <h5 class="card-title">Manusia</h5>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="col" id="kartu3">
-            <div class="card h-100">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="Semut"
+          >
+            <a
+              href="#"
+              class="btn"
+              role="button"
+              onclick="playerMilihKartu('Semut')"
+            >
               <img
-                src="human.gif"
-                alt="gif manusia"
+                src="semut-diam.jpg"
+                onmouseover="this.src = 'Semut.gif'"
+                onmouseout="this.src = 'semut-diam.jpg'"
+                alt="gambaran suit"
                 class="card-img-top"
-                style="height: 200px; object-fit: cover"
-                id="human"
               />
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Manusia/Orang</a>
+                <h5 class="card-title">Semut</h5>
               </div>
+            </a>
+          </div>
+
+          <div
+            class="card mt-5 d-none"
+            style="width: 18rem; transition: 0.5s"
+            id="vs"
+          >
+            <img src="vs.gif" alt="gambaran suit" class="card-img" />
+          </div>
+
+          <div
+            class="card mt-5 d-none"
+            style="width: 18rem; transition: 0.5s"
+            id="ai"
+          >
+            <div class="spinner-border m-auto mt-5 mb-5" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="card-body d-none" id="aiMilihSemut">
+              <img
+                src="semut-diam.jpg"
+                alt="gambaran suit"
+                class="card-img-top"
+              />
+              <h5 class="card-title">Semut</h5>
+            </div>
+            <div class="card-body d-none" id="aiMilihManusia">
+              <img
+                src="human-diam.jpg"
+                alt="gambaran suit"
+                class="card-img-top"
+              />
+              <h5 class="card-title">Manusia</h5>
+            </div>
+            <div class="card-body d-none" id="aiMilihGajah">
+              <img
+                src="gajah-diam.png"
+                alt="gambaran suit"
+                class="card-img-top"
+              />
+              <h5 class="card-title">Gajah</h5>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="aos.css" />
     <link rel="stylesheet" href="animate.css" />
-    <script src="bootstrap.js"></script>
+    <script src="bootstrap.js" defer></script>
     <script src="aos.js"></script>
+    <script src="script.js" defer></script>
     <style>
       @font-face {
         font-family: "web";
@@ -34,13 +35,23 @@
           var(--bs-bg-opacity)
         ) !important;
       }
+      .kartuMengecil {
+        transform: scale(0.7, 0.7);
+      }
+      .kartuMembesar {
+        transform: scale(1.2, 1.2);
+      }
     </style>
   </head>
   <body>
     <section class="min-vh-100 d-flex align-items-center">
       <div class="container text-center" data-aos="fade-up">
         <div class="row justify-content-around">
-          <div class="card mt-5" style="width: 18rem">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="sutenHewan"
+          >
             <a href="suten-hewan/index.html" class="btn" role="button">
               <img
                 src="suten-hewan/gajah-diam.png"
@@ -58,8 +69,12 @@
               </div>
             </a>
           </div>
-          <div class="card mt-5" style="width: 18rem">
-            <a href="suten-hewan/index.html" class="btn" role="button">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="sutenBenda"
+          >
+            <a href="suten-benda/index.html" class="btn" role="button">
               <img
                 src="suten-benda/batu-diam.jpeg"
                 onmouseover="this.src = 'suten-benda/batu.gif'"
@@ -76,8 +91,12 @@
               </div>
             </a>
           </div>
-          <div class="card mt-5" style="width: 18rem">
-            <a href="#" class="btn" role="button">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="sutenJari"
+          >
+            <a href="suten-jari/index.html" class="btn" role="button">
               <img
                 src="suten-jari-diam.jpeg"
                 onmouseover="this.src = 'suten-jari/suit-jari.gif'"

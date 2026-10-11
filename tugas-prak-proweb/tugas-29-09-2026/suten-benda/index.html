@@ -2,80 +2,122 @@
 <html lang="id">
   <head>
     <title>Suit</title>
-    <link rel="stylesheet" href="../bootstrap.css" />
-    <link rel="stylesheet" href="../aos.css" />
-    <script src="../bootstrap.js"></script>
-    <script src="../aos.js"></script>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="aos.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <script src="bootstrap.js" defer></script>
+    <script src="aos.js"></script>
+    <script src="script.js" defer></script>
     <style>
       @font-face {
         font-family: "web";
-        src: url(../../../alat-bantu/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
+        src: url(../../alat-bantu/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
       }
       * {
         font-family: web;
       }
       body {
-        background-image: url(../edited-photo.jpg);
+        background-image: url(edited-photo.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         min-height: 100vh;
         min-width: 100%;
       }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      .card:hover {
+        --bs-bg-opacity: 1;
+        background-color: rgba(
+          var(--bs-info-rgb),
+          var(--bs-bg-opacity)
+        ) !important;
+      }
+      .kartuMengecil {
+        transform: scale(0.7, 0.7);
+      }
+      .kartuMembesar {
+        transform: scale(1.2, 1.2);
+      }
     </style>
   </head>
   <body>
-    <div class="min-vh-100 d-flex align-items-center">
-      <div class="container text-center">
-        <div class="bg-secondary text-white">
-          <h1 class="text-center text-uppercase fw-bold">
-            silahkan pilih mau pakai yang mana
-          </h1>
-        </div>
+    <section class="min-vh-100 d-flex align-items-center">
+      <div class="container text-center" data-aos="fade-up">
         <div class="row justify-content-around">
-          <div class="col">
-            <div class="card h-100">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="sutenHewan"
+          >
+            <a href="suten-hewan/index.html" class="btn" role="button">
               <img
-                src="../suit-hewan.gif"
-                alt="gif gajah"
+                src="suten-hewan/gajah-diam.png"
+                onmouseover="this.src = 'suten-hewan/gajah.gif'"
+                onmouseout="this.src = 'suten-hewan/gajah-diam.png'"
+                alt="gambaran suit"
                 class="card-img-top"
-                style="height: 200px; object-fit: cover"
               />
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Gajah</a>
+                <h5 class="card-title">Suten Hewan</h5>
+                <p class="card-text">
+                  Suten hewan adalah suit yang menggunakan gajah - manusia -
+                  semut, sebagai penentu kemenangan
+                </p>
               </div>
-            </div>
+            </a>
           </div>
-
-          <div class="col">
-            <div class="card h-100">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="sutenBenda"
+          >
+            <a href="suten-hewan/index.html" class="btn" role="button">
               <img
-                src="semut.gif"
-                alt="gif semut"
+                src="suten-benda/batu-diam.jpeg"
+                onmouseover="this.src = 'suten-benda/batu.gif'"
+                onmouseout="this.src = 'suten-benda/batu-diam.jpeg'"
+                alt="gambaran suit"
                 class="card-img-top"
-                style="height: 200px; object-fit: cover"
               />
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Semut</a>
+                <h5 class="card-title">Suten Benda</h5>
+                <p class="card-text">
+                  Suten benda adalah suit yang menggunakan batu - gunting -
+                  kertas, sebagai penentu kemenangan
+                </p>
               </div>
-            </div>
+            </a>
           </div>
-
-          <div class="col">
-            <div class="card h-100">
+          <div
+            class="card mt-5"
+            style="width: 18rem; transition: 0.5s"
+            id="sutenJari"
+          >
+            <a href="#" class="btn" role="button">
               <img
-                src="human.gif"
-                alt="gif manusia"
+                src="suten-jari-diam.jpeg"
+                onmouseover="this.src = 'suten-jari/suit-jari.gif'"
+                onmouseout="this.src = 'suten-jari-diam.jpeg'"
+                alt="gambaran suit"
                 class="card-img-top"
-                style="height: 200px; object-fit: cover"
               />
               <div class="card-body">
-                <a href="#" class="btn btn-primary">Manusia/Orang</a>
+                <h5 class="card-title">Suten jari</h5>
+                <p class="card-text">
+                  Suten jari adalah suit yang menggunakan jempol - telunjuk -
+                  kelingking, sebagai penentu kemenangan
+                </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
