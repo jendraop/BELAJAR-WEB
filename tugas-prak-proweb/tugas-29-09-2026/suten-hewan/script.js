@@ -6,6 +6,7 @@ const ai = document.getElementById("ai");
 const aiMilihGajah = document.getElementById("aiMilihGajah");
 const aiMilihManusia = document.getElementById("aiMilihManusia");
 const aiMilihSemut = document.getElementById("aiMilihSemut");
+const loadingDulu = document.getElementById("loadingDulu");
 
 function cardGajahkecilPasDiHover() {
   Manusia.classList.add("kartuMengecil");
@@ -48,38 +49,50 @@ Semut.addEventListener("mouseleave", cardSemutbalik);
 
 const aiPilihkartu = Math.floor(Math.random() * 10);
 let pilihanAi;
-if (aiPilihkartu >= 0 && aiPilihkartu <= 3) {
-  aiMilihGajah.classList.remove("d-none");
-  aiMilihSemut.classList.add("d-none");
-  pilihanAi = "Gajah";
-} else if (aiPilihkartu >= 4 && aiPilihkartu <= 6) {
-  aiMilihManusia.classList.remove("d-none");
-  aiMilihSemut.classList.add("d-none");
-  pilihanAi = "Manusia";
-} else {
-  aiMilihSemut.classList.remove("d-none");
-  pilihanAi = "Semut";
-}
 
 function playerMilihKartu(kartu) {
+  function milih() {
+    if (aiPilihkartu >= 0 && aiPilihkartu <= 3) {
+      aiMilihGajah.classList.remove("d-none");
+      aiMilihSemut.classList.add("d-none");
+      pilihanAi = "Gajah";
+    } else if (aiPilihkartu >= 4 && aiPilihkartu <= 6) {
+      aiMilihManusia.classList.remove("d-none");
+      aiMilihSemut.classList.add("d-none");
+      pilihanAi = "Manusia";
+    } else {
+      aiMilihSemut.classList.remove("d-none");
+      pilihanAi = "Semut";
+    }
+  }
+
+  vs.classList.remove("d-none");
+  ai.classList.remove("d-none");
+  loadingDulu.classList.remove("d-none");
   if (kartu === "Gajah") {
     Manusia.classList.add("d-none");
     Semut.classList.add("d-none");
-    vs.classList.remove("d-none");
-    ai.classList.remove("d-none");
-    adu(kartu, pilihanAi);
+    setTimeout(function () {
+      loadingDulu.classList.add("d-none");
+      milih();
+      adu(kartu, pilihanAi);
+    }, 3000);
   } else if (kartu === "Manusia") {
     Gajah.classList.add("d-none");
     Semut.classList.add("d-none");
-    vs.classList.remove("d-none");
-    ai.classList.remove("d-none");
-    adu(kartu, pilihanAi);
+    setTimeout(function () {
+      loadingDulu.classList.add("d-none");
+      milih();
+      adu(kartu, pilihanAi);
+    }, 3000);
   } else if (kartu === "Semut") {
     Gajah.classList.add("d-none");
     Manusia.classList.add("d-none");
-    vs.classList.remove("d-none");
-    ai.classList.remove("d-none");
-    adu(kartu, pilihanAi);
+    setTimeout(function () {
+      loadingDulu.classList.add("d-none");
+      milih();
+      adu(kartu, pilihanAi);
+    }, 3000);
   } else {
     prompt("apa bos");
   }

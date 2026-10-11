@@ -2,22 +2,22 @@
 <html lang="id">
   <head>
     <title>Suit</title>
-    <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="stylesheet" href="aos.css" />
-    <link rel="stylesheet" href="animate.css" />
-    <script src="bootstrap.js" defer></script>
-    <script src="aos.js"></script>
+    <link rel="stylesheet" href="../bootstrap.css" />
+    <link rel="stylesheet" href="../aos.css" />
+    <link rel="stylesheet" href="../animate.css" />
+    <script src="../bootstrap.js" defer></script>
+    <script src="../aos.js"></script>
     <script src="script.js" defer></script>
     <style>
       @font-face {
         font-family: "web";
-        src: url(../../alat-bantu/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
+        src: url(../../../alat-bantu/fonts/JetBrains_Mono/static/JetBrainsMono-Regular.ttf);
       }
       * {
         font-family: web;
       }
       body {
-        background-image: url(edited-photo.jpg);
+        background-image: url(../edited-photo.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -50,72 +50,97 @@
           <div
             class="card mt-5"
             style="width: 18rem; transition: 0.5s"
-            id="sutenHewan"
+            id="Jempol"
           >
-            <a href="suten-hewan/index.html" class="btn" role="button">
-              <img
-                src="suten-hewan/gajah-diam.png"
-                onmouseover="this.src = 'suten-hewan/gajah.gif'"
-                onmouseout="this.src = 'suten-hewan/gajah-diam.png'"
-                alt="gambaran suit"
-                class="card-img-top"
-              />
+            <a
+              href="#"
+              class="btn"
+              role="button"
+              onclick="playerMilihKartu('Jempol')"
+            >
+              <img src="jempol.gif" alt="Jempol" class="card-img-top" />
               <div class="card-body">
-                <h5 class="card-title">Suten Hewan</h5>
-                <p class="card-text">
-                  Suten hewan adalah suit yang menggunakan gajah - manusia -
-                  semut, sebagai penentu kemenangan
-                </p>
+                <h5 class="card-title">Jempol</h5>
               </div>
             </a>
           </div>
+
           <div
             class="card mt-5"
             style="width: 18rem; transition: 0.5s"
-            id="sutenBenda"
+            id="Telunjuk"
           >
-            <a href="suten-hewan/index.html" class="btn" role="button">
-              <img
-                src="suten-benda/batu-diam.jpeg"
-                onmouseover="this.src = 'suten-benda/batu.gif'"
-                onmouseout="this.src = 'suten-benda/batu-diam.jpeg'"
-                alt="gambaran suit"
-                class="card-img-top"
-              />
+            <a
+              href="#"
+              class="btn"
+              role="button"
+              onclick="playerMilihKartu('Telunjuk')"
+            >
+              <img src="telunjuk.gif" alt="Telunjuk" class="card-img-top" />
               <div class="card-body">
-                <h5 class="card-title">Suten Benda</h5>
-                <p class="card-text">
-                  Suten benda adalah suit yang menggunakan batu - gunting -
-                  kertas, sebagai penentu kemenangan
-                </p>
+                <h5 class="card-title">Telunjuk</h5>
               </div>
             </a>
           </div>
+
           <div
             class="card mt-5"
             style="width: 18rem; transition: 0.5s"
-            id="sutenJari"
+            id="Kelingking"
           >
-            <a href="#" class="btn" role="button">
-              <img
-                src="suten-jari-diam.jpeg"
-                onmouseover="this.src = 'suten-jari/suit-jari.gif'"
-                onmouseout="this.src = 'suten-jari-diam.jpeg'"
-                alt="gambaran suit"
-                class="card-img-top"
-              />
+            <a
+              href="#"
+              class="btn"
+              role="button"
+              onclick="playerMilihKartu('Kelingking')"
+            >
+              <img src="kelingking.gif" alt="Kelingking" class="card-img-top" />
               <div class="card-body">
-                <h5 class="card-title">Suten jari</h5>
-                <p class="card-text">
-                  Suten jari adalah suit yang menggunakan jempol - telunjuk -
-                  kelingking, sebagai penentu kemenangan
-                </p>
+                <h5 class="card-title">Kelingking</h5>
               </div>
             </a>
+          </div>
+
+          <div
+            class="card mt-5 d-none"
+            style="width: 18rem; transition: 0.5s"
+            id="vs"
+          >
+            <img src="../suten-hewan/vs.gif" alt="vs" class="card-img" />
+          </div>
+
+          <div
+            class="card mt-5 d-none"
+            style="width: 18rem; transition: 0.5s"
+            id="ai"
+          >
+            <div
+              class="spinner-border m-auto mt-5 mb-5 d-none"
+              role="status"
+              id="loadingDulu"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+
+            <div class="card-body d-none" id="aiMilihKelingking">
+              <img src="Kelingking.gif" alt="Kelingking" class="card-img-top" />
+              <h5 class="card-title">Kelingking</h5>
+            </div>
+
+            <div class="card-body d-none" id="aiMilihTelunjuk">
+              <img src="Telunjuk.gif" alt="Telunjuk" class="card-img-top" />
+              <h5 class="card-title">Telunjuk</h5>
+            </div>
+
+            <div class="card-body d-none" id="aiMilihJempol">
+              <img src="Jempol.gif" alt="Jempol" class="card-img-top" />
+              <h5 class="card-title">Jempol</h5>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <script>
       AOS.init();
     </script>
