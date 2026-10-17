@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="alat-bantu/bootstrap-5.3.8-dist/css/bootstrap.css"
+    />
     <style>
       @font-face {
         font-family: "webku";
@@ -14,39 +18,81 @@
         font-family: "webku";
       }
       body {
-        background-image: url(tugas-prak-proweb/tugas-29-09-2026/edited-photo.jpg);
+        min-height: 100vh;
+        background: linear-gradient(rgb(32, 32, 32), rgb(140, 137, 137)), 100px;
+        background-size: auto;
         background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+      }
+      .kursorMasuk {
+        transition: all 0.5s ease-in-out;
+      }
+      .kursorMasuk:hover {
+        background-color: black;
+        transform: scale(1.1);
+      }
+      a:visited {
+        color: white;
       }
     </style>
     <title>Beranda</title>
   </head>
-  <body align="center">
-    <h1>Kumpulan Tugas dari Pak Ivan</h1>
-    <p>
-      Link tugas pertama:<br />
-      <a href="./tugas-1/index.html">Tugas 1</a>
-    </p>
-    <p>
-      challenge 1:<br />
-      <a href="./challange-1/challenge.html">challange-1</a>
-    </p>
-    <p>
-      Tugas 2:<br />
-      <a href="./tugas-2/index.html">Tugas 2</a>
-    </p>
-    <p>
-      Tugas 3:<br />
-      <a href="./tugas-3/index.html">Tugas 3</a>
-    </p>
-    <p>
-      Tugas 4:<br />
-      <a href="tugas-4/index.html">Tugas 4</a>
-    </p>
-    <p>
-      Tugas praktikum 1:<br />
-      <a href="tugas-prak-proweb/tugas-29-09-2026/index.html">Tugas 4</a>
-    </p>
+  <body class="text-center">
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <span
+          class="navbar-brand mx-auto text-uppercase text-light bg-secondary rounded px-2 py-0"
+        >
+          Kumpulan Tugas Web
+        </span>
+      </div>
+    </nav>
+
+    <div class="container text-light mt-5" style="width: 50vh">
+      <h4>Tugas Proweb</h4>
+      <a href="./tugas-1/index.html">
+        <div class="border border-primary border-4 rounded my-3 kursorMasuk">
+          <p class="pt-3">Tugas 1</p>
+        </div>
+      </a>
+
+      <a href="./challange-1/challenge.html">
+        <div class="border border-primary border-4 rounded my-3 kursorMasuk">
+          <p class="pt-3">challange-1</p>
+        </div>
+      </a>
+
+      <a href="./tugas-2/index.html">
+        <div class="border border-primary border-4 rounded my-3 kursorMasuk">
+          <p class="pt-3">Tugas 2</p>
+        </div>
+      </a>
+
+      <a href="./tugas-3/index.html">
+        <div class="border border-primary border-4 rounded my-3 kursorMasuk">
+          <p class="pt-3">Tugas 3</p>
+        </div>
+      </a>
+
+      <a href="tugas-4/index.html">
+        <div class="border border-primary border-4 rounded my-3 kursorMasuk">
+          <p class="pt-3">Tugas 4</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="container text-light mt-5" style="width: 50vh">
+      <h4>Tugas Praktikum Proweb</h4>
+      <a href="tugas-prak-proweb/tugas-29-09-2026/index.html">
+        <div class="border border-primary border-4 rounded my-3 kursorMasuk">
+          <p class="pt-3">Tugas praktikum proweb</p>
+        </div>
+      </a>
+    </div>
+
+    <a class="btn btn-info" href="https://wa.me/6285833936093" role="button">
+      <img src="alat-bantu/whatsapp.svg" alt="wa icon" />
+      Contact me
+    </a>
+    <script src="alat-bantu/bootstrap-5.3.8-dist/js/bootstrap.js"></script>
   </body>
 </html>
